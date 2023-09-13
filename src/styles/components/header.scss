@@ -1,0 +1,176 @@
+@mixin headersize() {
+  background-color: transparentize($color: $primary, $amount: 1);
+  width: 100%;
+  top: 0;
+  transition: all 0.2s;
+}
+
+@mixin navXpole() {
+  border: 1px solid white;
+  width: 1.6rem;
+  margin: -0.1rem;
+}
+
+.hdr-logo {
+  font-family: "Yatra One";
+  margin-left: 1rem;
+}
+
+.hdr-a {
+  @include headersize;
+  height: 4.5rem;
+}
+.hdr-b {
+  @include headersize;
+  height: 3rem;
+  position: fixed;
+}
+@media screen and (max-width: 540px) {
+  .hdr-items {
+    list-style: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    & .hdr-nav-menu-button {
+      & .nav-x {
+        width: 1.1rem;
+        margin: 0.35rem;
+        & .nav-menu-cls-1 {
+          @include navXpole();
+          rotate: 50deg;
+        }
+        & .nav-menu-cls-2 {
+          @include navXpole();
+          rotate: 310deg;
+        }
+        rotate: 720deg;
+        transition: all 500ms ease-in-out;
+      }
+      & .nav-- {
+        & .nav-menu-cls-3 {
+          border: 1px solid white;
+          width: 1.6rem;
+          margin: 0.35rem;
+        }
+
+        rotate: 0deg;
+        transition: all 500ms ease-in-out;
+      }
+    }
+    & .hdr-hide {
+      height: 0px;
+      width: 0;
+      overflow: hidden;
+      // transition: all 50ms ease-out;
+    }
+    & .hdr-show {
+      transition: all 0.1s ease-out;
+      position: absolute;
+      height: auto;
+      padding: 0.2rem;
+      top: 3.5rem;
+      overflow: auto;
+      left: 0;
+      width: 100vw;
+      background-color: lighten($primary, 45%);
+
+      & div {
+        & li {
+          padding: 0.5rem;
+          transition: all 100ms;
+          font-size: 1.12rem;
+          height: 1.22rem;
+          overflow: hidden;
+          &:hover {
+            transform: scale(1.01);
+            box-shadow: -0.4rem 0.4rem 1rem 0px black;
+            color: $text-color;
+          }
+        }
+        & hr {
+          :hover {
+            box-shadow: -0.4rem 0.4rem 1rem 0px black;
+            background-color: $hoverback-ground;
+            color: $text-color;
+          }
+        }
+        & .hdr-active {
+          background-color: $primary;
+          padding: 0.09rem;
+          border: none;
+          border-radius: 1rem;
+          margin-right: auto;
+          width: 30%;
+          box-shadow: -0.4rem 0.4rem 1rem 0px black;
+        }
+        & .hdr-inactive {
+          background-color: lighten($color: $primary, $amount: 20%);
+          padding: 0.09rem;
+          border: none;
+          border-radius: 1rem;
+          margin-right: auto;
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .hdr-items {
+    list-style: none;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 1vw;
+    & .hdr-nav-menu-button {
+      display: none;
+    }
+    & div {
+      display: flex;
+      & div {
+        display: flex;
+        flex-direction: column;
+        & li {
+          padding: 0.5rem;
+          transition: all 100ms;
+          font-size: 1.12rem;
+          height: 1.22rem;
+          overflow: hidden;
+          &:hover {
+            transform: scale(1.01);
+            border-radius: 1rem;
+            box-shadow: -0.4rem 0.4rem 1rem 0px black;
+            // background-color: $hoverback-ground;
+            color: $text-color;
+          }
+        }
+        & hr {
+          :hover {
+            border-radius: 1rem;
+            box-shadow: -0.4rem 0.4rem 1rem 0px black;
+            background-color: $hoverback-ground;
+            color: $text-color;
+          }
+        }
+        & .hdr-active {
+          background-color: $primary;
+          padding: 0.09rem;
+          border: none;
+          border-radius: 1rem;
+          margin: auto;
+          width: 90%;
+          box-shadow: -0.4rem 0.4rem 1rem 0px black;
+        }
+        & .hdr-inactive {
+          background-color: none;
+          padding: 0.05rem;
+          border-radius: 1rem;
+          margin: auto;
+          width: 90%;
+        }
+      }
+    }
+  }
+}

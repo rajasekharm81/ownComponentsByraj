@@ -1,0 +1,87 @@
+.align-items-center {
+  align-items: center;
+}
+.align-items-start {
+  align-items: start;
+}
+.align-items-end {
+  align-items: end;
+}
+.bg-primary {
+  background-color: $primary;
+}
+.bg-dark {
+  background-color: darken($primary, 40%);
+  color: lighten($primary, 50%);
+}
+.bg-light {
+  background-color: lighten($primary, 30%);
+  color: darken($color: $primary, $amount: 40%);
+}
+.btn {
+  padding: 0.45rem;
+  background-color: none;
+  border: none;
+  border-radius: 0.4rem;
+  box-shadow: -0rem 0.1rem 0.3rem 0px black;
+  transition: all 100ms;
+  #-lg {
+    padding: 0.4rem;
+  }
+  &:hover {
+    box-shadow: -0rem 0.3rem 0.5rem 0px black;
+  }
+  &.btn-primary {
+    background-color: $primary;
+    color: $primary-font;
+  }
+  &.btn-success {
+    background-color: $success;
+    color: $success-font;
+  }
+}
+.d-flex {
+  display: flex;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-column {
+  flex-direction: column;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-start {
+  justify-content: start;
+}
+.justify-content-end {
+  justify-content: end;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.justify-content-around {
+  justify-content: space-around;
+}
+.justify-content-even {
+  justify-content: space-evenly;
+}
+.text-primary {
+  color: $primary;
+}
+.text-secondary {
+  color: $secondary;
+}
+.text-success {
+  color: $success;
+}
+.text-danger {
+  color: $danger;
+}
+.text-info {
+  color: $info;
+}
+.text-warning {
+  color: $warning;
+}
