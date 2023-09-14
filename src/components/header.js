@@ -85,7 +85,9 @@ const Header = () => {
           </div>
           <div
             id="hdr-container"
-            className={`${showItems ? "hdr-show" : "hdr-hide"} `}
+            className={`${showItems ? "hdr-show" : "hdr-hide"} ${
+              light ? "bg-light" : "bg-dark"
+            }`}
           >
             {navItms.map((each, index) => {
               return (

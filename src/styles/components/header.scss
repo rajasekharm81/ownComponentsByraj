@@ -43,6 +43,7 @@
           rotate: 310deg;
         }
         rotate: 720deg;
+        opacity: 1;
         transition: all 500ms ease-in-out;
       }
       & .nav-- {
@@ -50,6 +51,7 @@
           border: 1px solid white;
           width: 1.6rem;
           margin: 0.35rem;
+          opacity: 1;
         }
 
         rotate: 0deg;
@@ -60,6 +62,7 @@
       height: 0px;
       width: 0;
       overflow: hidden;
+      opacity: 0;
       // transition: all 50ms ease-out;
     }
     & .hdr-show {
@@ -71,7 +74,7 @@
       overflow: auto;
       left: 0;
       width: 100vw;
-      background-color: lighten($primary, 45%);
+      // background-color: lighten($primary, 45%);
 
       & div {
         & li {
@@ -110,6 +113,12 @@
           margin-right: auto;
           width: 90%;
         }
+      }
+      .items-bg-light {
+        background-color: lighten($primary, 45%);
+      }
+      .items-bg-dark {
+        background-color: darken($primary, 45%);
       }
     }
   }
